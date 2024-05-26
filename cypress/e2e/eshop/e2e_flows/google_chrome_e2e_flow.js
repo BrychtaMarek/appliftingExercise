@@ -1,8 +1,8 @@
-import cartPage from "../../../support/pages/cartPage";
-import checkoutPage from "../../../support/pages/checkoutPage";
+import cartPage from "../../../support/pages/cartPage"
+import checkoutPage from "../../../support/pages/checkoutPage"
 import generalPage from "../../../support/pages/generalPage"
 import productPage from "../../../support/pages/productPage"
-import { products } from "../../../fixtures/products";
+import { products } from "../../../fixtures/products"
 
 let secondProductName, secondProductPrice;
 
@@ -41,7 +41,7 @@ describe('Google Chrome E2E flow', () => {
     it('should add product to cart and continue shopping', () => {
       cy.get(productPage.btnAddToCart).click();
       cy.get(generalPage.lblCartQuantity).should('have.text', '1')
-      cy.get(generalPage.lblPositiveToast).should('be.visible').and('have.text', 'Product was added to cart.');
+      cy.get(generalPage.lblPositiveToast).should('be.visible').and('have.text', 'Product was added to cart.')
       cy.get(generalPage.cardDialogModalWindowGeneric).should('be.visible')
       .within(($dialog)=>{
         cy.get(generalPage.btnViewCart).should('be.visible')
@@ -73,7 +73,7 @@ describe('Google Chrome E2E flow', () => {
   
       cy.get(productPage.btnAddToCart).first().click()
       cy.get(generalPage.lblCartQuantity).should('have.text', '2')
-      cy.get(generalPage.lblPositiveToast).should('be.visible').and('have.text', 'Product was added to cart.');
+      cy.get(generalPage.lblPositiveToast).should('be.visible').and('have.text', 'Product was added to cart.')
       cy.get(generalPage.cardDialogModalWindowGeneric).should('be.visible')
       .within(($dialog)=>{
         cy.get(generalPage.btnProceed).should('be.visible')

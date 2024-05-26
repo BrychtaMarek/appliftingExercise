@@ -1,5 +1,5 @@
-import cartPage from "./pages/cartPage";
-import productPage from "./pages/productPage";
+import cartPage from "./pages/cartPage"
+import productPage from "./pages/productPage"
 import generalPage from "./pages/generalPage"
 
 Cypress.Commands.add('processPayment', () => { 

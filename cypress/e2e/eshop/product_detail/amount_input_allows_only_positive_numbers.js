@@ -1,6 +1,6 @@
 import generalPage from "../../../support/pages/generalPage"
-import productPage from "../../../support/pages/productPage";
-import { products } from "../../../fixtures/products";
+import productPage from "../../../support/pages/productPage"
+import { products } from "../../../fixtures/products"
 
 //preconditions
 before(() => {
