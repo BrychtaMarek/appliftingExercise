@@ -1,3 +1,4 @@
+//Automation for IE-1
 import generalPage from "../../../support/pages/generalPage"
 import productPage from "../../../support/pages/productPage"
 import { products } from "../../../fixtures/products"
@@ -14,7 +15,7 @@ describe('Search for an existing product', () => {
       
     });
 
-    it('should click on the Search button.', () => {
+    it('should click on the Search button and display the product detail.', () => {
       cy.get(generalPage.btnSearchProduct).click()
       cy.get(generalPage.lblLoading).should('not.exist')
       cy.get(productPage.pageProductDetailLanding).should('be.visible')
@@ -31,11 +32,10 @@ describe('Search for an existing product', () => {
 
     it('should enter the name of an existing product in the search bar in upper case', () => {
       cy.get(generalPage.txtSearchProduct).type(products.barbell.name.toUpperCase())
-      cy.get(generalPage.cardSearchDropdown).contains(products.barbell.name).should('be.visible')
-      
+      cy.get(generalPage.cardSearchDropdown).contains(products.barbell.name).should('be.visible')   
     });
 
-    it('should click on the Search button.', () => {
+    it('should click on the Search button and display the product detail.', () => {
       cy.get(generalPage.btnSearchProduct).click()
       cy.get(generalPage.lblLoading).should('not.exist')
       cy.get(productPage.pageProductDetailLanding).should('be.visible')
