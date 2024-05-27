@@ -1,3 +1,4 @@
+//Automation for IE-26
 import cartPage from "../../../support/pages/cartPage"
 import checkoutPage from "../../../support/pages/checkoutPage"
 import generalPage from "../../../support/pages/generalPage"
