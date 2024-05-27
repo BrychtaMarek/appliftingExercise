@@ -1,3 +1,4 @@
+//Automation for IE-6
 import categories from "../../../support/enums/categories"
 import generalPage from "../../../support/pages/generalPage"
 import productPage from "../../../support/pages/productPage"
